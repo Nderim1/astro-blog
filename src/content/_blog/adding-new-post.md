@@ -1,6 +1,6 @@
 ---
 author: Sat Naing
-pubDatetime: 2022-09-23T15:22:00Z
+date: 2022-09-23T15:22:00Z
 title: Adding new posts in AstroPaper theme
 postSlug: adding-new-posts-in-astropaper-theme
 featured: true
@@ -27,19 +27,19 @@ Here is the list of frontmatter property for each post.
 | ----------------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
 | **_title_**       | Title of the post. (h1)                                                         | required<sup>\*</sup>                         |
 | **_description_** | Description of the post. Used in post excerpt and site description of the post. | required<sup>\*</sup>                         |
-| **_pubDatetime_** | Published datetime in ISO 8601 format.                                          | required<sup>\*</sup>                         |
+| **_date_**        | Published datetime in ISO 8601 format.                                          | required<sup>\*</sup>                         |
 | **_author_**      | Author of the post.                                                             | default = SITE.author                         |
-| **_postSlug_**    | Slug for the post. Will automatically be slugified.                             | default = slugified title                     |
+| **_postSlug_**    | postSlug for the post. Will automatically be postSlugified.                     | default = postSlugified title                 |
 | **_featured_**    | Whether or not display this post in featured section of home page               | default = false                               |
 | **_draft_**       | Mark this post 'unpublished'.                                                   | default = false                               |
 | **_tags_**        | Related keywords for this post. Written in array yaml format.                   | default = others                              |
 | **_ogImage_**     | OG image of the post. Useful for social media sharing and SEO.                  | default = SITE.ogImage or generated SVG image |
 
-Only `title`, `description` and `pubDatetime` fields in frontmatter must be specified.
+Only `title`, `description` and `date` fields in frontmatter must be specified.
 
 Title and description (excerpt) are important for search engine optimization (SEO) and thus AstroPaper encourages to include these in blog posts.
 
-`slug` is the unique identifier of the url. Thus, `slug` must be unique and different from other posts. The whitespace of `slug` needs to be separated with `-` or `_` but `-` is recommended. However, even if you don't write the correct slug, AstroPaper will automatically slugify your incorrect slug. If slug is not specified, the slugified title of the post will be used as slug.
+`postSlug` is the unique identifier of the url. Thus, `postSlug` must be unique and different from other posts. The whitespace of `postSlug` needs to be separated with `-` or `_` but `-` is recommended. However, even if you don't write the correct postSlug, AstroPaper will automatically postSlugify your incorrect postSlug. If postSlug is not specified, the postSlugified title of the post will be used as postSlug.
 
 If you omit `tags` in a blog post (in other words, if no tag is specified), the default tag `others` will be used as a tag for that post. You can set the default tag in the `/src/content/_schemas.ts` file.
 
@@ -63,7 +63,7 @@ Here is the sample frontmatter for a post.
 ---
 title: The title of the post
 author: your name
-pubDatetime: 2022-09-21T05:17:19Z
+date: 2022-09-21T05:17:19Z
 postSlug: the-title-of-the-post
 featured: true
 draft: false
