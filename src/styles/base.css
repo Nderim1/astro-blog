@@ -112,8 +112,8 @@
   }
 
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-skin-card-muted;
+   ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
   }
 }
 

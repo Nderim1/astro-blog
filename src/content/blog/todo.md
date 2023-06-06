@@ -14,24 +14,13 @@ This will allow me to get to know the basics of that specific tool.
 
 I will start with Svelte. In the future will build a TODO app with React, Vue, Solid, Remix and other tools I want to get to know better.
 
-<br />
-
 The TODO app will be simple (I am trying hard to not overcomplicate it with 'features'
-:D) but functional. It will be a crud type app: so the app will allow you to create
-a todo, read it, update it and delete it.
-
-<br />
+:D) but functional. It will be a crud type app: so the app will allow you to create a todo, read it, update it and delete it.
 
 It will then save the todos to `localstorage` so they are persistent between sessions.
-
-<br />
 
 I will make the source code available also! Stay tuned!
 
 --
 
-<span>
-
-{/_ Checkout the post on <a href={`${URLS.sveltePost}`}> svelte app</a> _/}
-
-</span>
+[TODO app in SvelteJS](/posts/try-sveltejs)

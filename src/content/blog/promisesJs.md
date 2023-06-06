@@ -10,60 +10,38 @@ tags:
   - promises
 ---
 
-<img src="/images/posts/promises.png" alt="Banner image" />
+![Promises image](/public/assets/images/promises.png)
 
-<br />
+[Source Code](https://github.com/Nderim1/javascript/blob/main/promises.js)
 
-<a href="https://github.com/Nderim1/javascript/blob/main/promises.js" target="_blank">
-  <span class='link'>Source Code</span>
-</a>
+<br>
 
-<br />
-<br />
-<br />
-
-... by using `Promise.all([])`.
+...by using `Promise.all([])`.
 But wait, there is another less known way!
 
-<br />
-
 Say you have 2 asynchronous functions that take 4 seconds to resolve (2 seconds each).
-
-<br />
 
 For testing purposes we can 'artificially' create these 2 functions by using `new Promise`
 and making them return after 2 seconds by using `setTimeout(() => {...}, 2000)`.
 
-<br />
-
 So:
 
-<img src="/images/posts/promises2.png" alt="Creating two promises that takes 2 seconds each to resolve" />
-
-<br />
+![Creating two promises that takes 2 seconds each to resolve](/public//assets/images/promises2.png)
 
 Now, usually if you use `async/await` (which you should :), you would do:
 
-<img src="/images/posts/promises3.png" alt="How you usually resolve promises with async/await" />
-
-<br />
+![How you usually resolve promises with async/await](../../../public/assets/images/promises3.png)
 
 By doing that, `promise2` has to 'await' 2 full seconds before it starts to execute and resolve after 2 other seconds.
 
 The whole operation lasts 4 unnecessary seconds.
 
-<br />
-
 How can you make both async functions start executing at the same time, or in other words make them run in parallel?
 
 By calling them, before 'awaiting' them:
-<img src="/images/posts/promises4.png" alt="Calling promises before awaiting them, makes them run in parallel" />
+![Calling promises before awaiting them, makes them run in parallel](/public/assets/images/promises4.png)
 
-<br />
-<br />
+<br>
 
 You can test this yourself.
-
-Copy <a href="https://github.com/Nderim1/javascript/blob/main/promises.js" target="_blank">
-<span class='postLink'>the code</span>
-</a> and paste it in your console.
+Copy [the code](https://github.com/Nderim1/javascript/blob/main/promises.js) and paste it in your console.

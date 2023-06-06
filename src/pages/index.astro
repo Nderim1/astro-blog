@@ -14,7 +14,6 @@ import { SOCIALS } from "@config";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -23,7 +22,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Hey! :) Welcome! 👋</h1>
+      <h1>Hey! :) Welcome!</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -41,7 +40,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        Just a developer sharing his thoughts with the world on coding, hobbies,
+        I am a developer sharing his thoughts with the world on coding, hobbies,
         books, crypto, earth, life, the universe and Javascript ecosystem.
       </p>
       <small>Take everything with a grain of salt! :P 🧂</small>
@@ -71,7 +70,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </ul>
     </section>
   </main>
-
   <Footer />
 </Layout>
 

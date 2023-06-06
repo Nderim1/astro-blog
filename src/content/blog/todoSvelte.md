@@ -9,104 +9,71 @@ tags:
   - svelte
   - todo
 postSlug: try-sveltejs
+ogImage: assets/images/svelte-todo.png
 ---
 
-<img src="/images/posts/svelte-todo.png" />
+![Test image](/public/assets/images/svelte-todo.png)
 
-<br />
+[DEMO App](https://svelte.devthoughts.xyz)  
+[Source Code](https://github.com/Nderim1/svelteTodo)
 
-<a href="https://svelte.devthoughts.xyz" target="_blank" >
-  <span class='link'>DEMO App</span>
-</a>
-<br />
-<a href="https://github.com/Nderim1/svelteTodo" target="_blank">
-  <span class='link'>Source Code</span>
-</a>
-<br />
-<br />
+<br>
 
-Let me start by saying that Svelte documentation is AMAZING!
+## What & Why
 
-<br />
+Today I will be building a simple but complete TODO app with SvelteJS.
+A TODO app is fairly simple to build. You don't need to know complex concepts of the language to build such an app, which makes it the perfect thing to build when trying to learn or exploring a new language or framework. <br>
+<a href='/posts/todo'>In this post</a> you can find a more extensive explanation of how the app will work.
 
-A TODO app is farily simple to build. It does not make use of complex concept of the tool you are using to build it. <a href=''>In this post</a> you can find a more extensive explanation of how the app works.
+## HOW
 
-<br />
+Svelte documentation is AMAZING!
+I manage to build the whole app by just following [the examples on Svelte documentation page](https://svelte.dev/examples)!
 
-That said, you still need to learn how to share data between components by passing props, calling methods, etc.
-
-I manage to build the whole app by just following [the examples on Svelte documentation page](https://svelte.dev/examples). Amazing!
-
-<br />
-
-One thing that you immediatly notice when you start working with Svelte is that how small the boilerplate code is. You can just create a file with `.svelte` and start writing html.
+One thing that you immediately notice when you start working with Svelte is how small the boilerplate code is. You can just create a file with `.svelte` and start writing HTML (not exactly tho since the "HTML" syntax you write in a .svelte file is a superset of HTML). <br>
 How cool is that?
 
 To add Javascript (and make use of Svelte features) you just need to add a `<script>` tag and you are good to go.
 
 Same with styles: just add a `<style>` tag and start writing css.
 
-<br />
+I would not want learn Svelte as my first Javascript framework tho. Svelte does a lot of things under the hood that you might not understand if it is your first framework you learn. A lot of things are hidden underneath, and a lot of magic is going around.
 
-I would not want learn Svelte as my first Javascript framework tho. Svelte does a lot of things under the hood that you might not understand if it is your first framwork you learn.
-
-Example: In React you use `export default MyComponent` to export a component. In Svelte you dont need that.
+Example: In React you use `export default MyComponent` to export a component. In Svelte you don't need that.
 
 As soon as your create a file with `.svelte` extension, the Svelte compiler exports it automatically.
 
-If Svelte was your first framework you might not even ask yourself this question.
-
-<br />
-
 Passing a prop to a component is "interesting" in a weird way in Svelte.
-
-<br />
 
 Say you have a variable called `hello` that you want to pass down to a child component:
 
-<br />
+```svelte
+<script>
+  import ChildComponent from './ChildComponent.svelte';
+  const hello = 'hello';
+</script>
 
-  <div>
-  {{let a = x}}
-  </div>
-
-```js
-  <script>
-    import ChildComponent from './ChildComponent.svelte';
-    const hello = 'hello';
-  </script>
-
-  < ChildComponent hello={hello} />}
+< ChildComponent hello={hello} />
 ```
-
-<br />
 
 In the child component then you need to use, brace yourself, the `export` keyword to accept the prop:
 
-<br />
-
-```js
+```svelte
 // ChildComponent.svelte
 
-  <script>
-    export let hello;
-  </script>
+<script>
+  export let hello;
+</script>
 
-  <span>{hello} there</span>
+<span>{hello} there</span>
 ```
 
-<br />
-
 WAT? :D Anywaysss...
-
-<br />
 
 State in Svelte is a piece of cake. At least the variation of it with no stores involved.
 
 You just declare a variable in the script tag and use it wherever you want in the file. The component will get rerendered when that variable changes.
 
 Nice stuff!
-
-<br />
 
 Overall I really like Svelte. I hope I will get the chance to create something more complex with it. You should try it too! :)
