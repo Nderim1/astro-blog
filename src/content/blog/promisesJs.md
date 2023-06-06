@@ -1,6 +1,6 @@
 ---
 author: devthoughts
-title: How can you run 2 promises in parallel in Javascript?
+title: How can you run 2 promises in parallel in Javascript
 date: 2022-05-07T15:22:00Z
 description: There are 2 ways to run Javascript promises in parallel or concurrently; by using Promise.all or by calling the promises before awaiting them
 postSlug: promises-js
