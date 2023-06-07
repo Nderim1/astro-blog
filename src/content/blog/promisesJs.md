@@ -11,7 +11,7 @@ tags:
   - promises
 ---
 
-![Promises image](/assets/images/promises.png)
+![Promises image](../../assets/images/promises.png)
 
 [Source Code](https://github.com/Nderim1/javascript/blob/main/promises.js)
 
