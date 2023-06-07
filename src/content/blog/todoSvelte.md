@@ -12,7 +12,7 @@ postSlug: try-sveltejs
 ogImage: assets/images/svelte-todo.png
 ---
 
-![Test image](/public/assets/images/svelte-todo.png)
+![Test image](../../assets/images/svelte-todo.png)
 
 [DEMO App](https://svelte.devthoughts.xyz)  
 [Source Code](https://github.com/Nderim1/svelteTodo)
